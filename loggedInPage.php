@@ -1,5 +1,7 @@
 <?php
 
+//Set cookie
+
     session_start();
     $diaryContent= "";
 
@@ -7,7 +9,9 @@
         
         $_SESSION['id'] = $_COOKIE['id'];
     }
-    
+
+//Check for saved content or display blank logged in page
+
     if (array_key_exists('id', $_SESSION) && $_SESSION['id']){
         
         include("connection.php");
